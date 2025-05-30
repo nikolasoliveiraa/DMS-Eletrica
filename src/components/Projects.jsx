@@ -2,17 +2,17 @@ import React from 'react';
 
 const projects = [
   {
-    image: "assets/img/comercial.jpg",
+    image: "assets/img/Comercial.jpg",
     title: "Instalação Comercial",
     description: "Lojas e Comercio"
   },
   {
-    image: "assets/img/Automação.jpg",
+    image: "assets/img/Painel.jpg",
     title: "Automação Eletrica",
     description: "Paineis Eletrícos"
   },
   {
-    image: "assets/img/residencia.jpg",
+    image: "assets/img/Residencial.jpg",
     title: "Reforma Elétrica",
     description: "Residência"
   }

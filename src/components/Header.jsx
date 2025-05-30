@@ -15,7 +15,7 @@ const Header = ({ scrolled }) => {
   return (
     <header 
       id="main-header" 
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}
+      className="h-20 py-5" // altura e padding ajustados aqui
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">

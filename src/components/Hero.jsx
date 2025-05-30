@@ -6,7 +6,7 @@ const Hero = () => {
       id="home" 
       className="pt-32 pb-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white relative" 
       style={{ 
-        background: 'linear-gradient(to right, #1e3a8aCC, #1e40afCC), url("assets/img/home-img.jpg") center center/cover no-repeat'
+        background: 'linear-gradient(to right, #1e3a8aCC, #1e40afCC), url("assets/img/Home.jpg") center center/cover no-repeat'
       }}
     >
       <div className="container mx-auto px-4">
