@@ -8,13 +8,13 @@ const projects = [
   },
   {
     image: "assets/img/Painel.jpg",
-    title: "Automação Eletrica",
-    description: "Paineis Eletrícos"
+    title: "Automação Elétrica",
+    description: "Paineis Elétricos"
   },
   {
     image: "assets/img/Residencial.jpg",
     title: "Reforma Elétrica",
-    description: "Residência"
+    description: "Óticas"
   }
 ];
 

@@ -4,10 +4,7 @@
   "private": true,
   "description": "Projeto React para DMS Elétrica",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-scripts start"
   },
   "dependencies": {
     "react": "^18.2.0",

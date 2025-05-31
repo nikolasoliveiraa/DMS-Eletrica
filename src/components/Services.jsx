@@ -1,5 +1,7 @@
 import React from 'react';
-import { FaBolt, FaSolarPanel, FaLightbulb, FaPlug, FaHome, FaTools } from 'react-icons/fa';
+import { FaBolt, FaSnowflake, FaLightbulb, FaPlug, FaHome } from 'react-icons/fa';
+import { GiColdHeart } from 'react-icons/gi';
+import { MdAcUnit } from 'react-icons/md';
 
 const services = [
   {
@@ -8,9 +10,9 @@ const services = [
     description: "Instalações elétricas residenciais, comerciais e industriais com segurança e qualidade."
   },
   {
-    icon: <FaSolarPanel className="text-4xl" />,
-    title: "Energia Solar",
-    description: "Sistemas de energia solar fotovoltaica para redução de custos com energia elétrica."
+    icon: <FaSnowflake className="text-4xl" />,
+    title: "Instalação de chileres",
+    description: "Instalação de sistemas de climatização e refrigeração, incluindo chileres"
   },
   {
     icon: <FaLightbulb className="text-4xl" />,
@@ -28,9 +30,9 @@ const services = [
     description: "Regularização e instalação de padrão de entrada junto à concessionária de energia."
   },
   {
-    icon: <FaTools className="text-4xl" />,
-    title: "Automação Residencial",
-    description: "Soluções em automação para maior conforto, segurança e economia de energia."
+    icon: <MdAcUnit  className="text-4xl" />,
+    title: "Instalações e manutenção de Ar-Condicionado",
+    description: "Instalação e manutenção de sistemas de climatização, garantindo conforto e eficiência energética."
   }
 ];
 
