@@ -1,7 +1,21 @@
-import React from 'react';
-import { FaPhoneAlt, FaEnvelope, FaClock, FaCheckCircle } from 'react-icons/fa';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_r1ecxbq', 'template_14upepd', form.current, '68WIh7pnLrim9NRbs')
+      .then(() => {
+        alert('Pedido enviado com sucesso!');
+        form.current.reset();
+      }, () => {
+        alert('Erro ao enviar pedido.');
+      });
+  };
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -13,22 +27,22 @@ const Contact = () => {
         
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Nome</label>
-                <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" name="name" id="name" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-gray-700 font-medium mb-2">E-mail</label>
-                <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="email" name="email" id="email" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
               <div>
                 <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Telefone</label>
-                <input type="tel" id="phone" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="tel" name="phone" id="phone" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
               <div>
                 <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Mensagem</label>
-                <textarea id="message" rows="4" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <textarea name="message" id="message" rows="4" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
               </div>
               <button type="submit" className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full">
                 Enviar Mensagem

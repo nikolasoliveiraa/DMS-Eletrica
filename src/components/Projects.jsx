@@ -13,9 +13,20 @@ const projects = [
   },
   {
     image: "assets/img/Residencial.jpg",
-    title: "Reforma Elétrica",
-    description: "Óticas"
+    title: "Instalação e manutenção Elétrica",
+    description: "Residencial, Comercial e Industrial"
+  },
+   {
+    image: "assets/img/Chiler.jpg", 
+    title: "Instalação de Chiller",
+    description: "Sistemas de Refrigeração"
+  },
+  {
+    image: "assets/img/Ar-condicionado.jpg",
+    title: "Instalação de Ar Condicionado",
+    description: "Sistemas de Climatização Residencial e Comercial"
   }
+
 ];
 
 const Projects = () => {
