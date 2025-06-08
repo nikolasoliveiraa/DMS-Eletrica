@@ -25,6 +25,11 @@ const projects = [
     image: "assets/img/Ar-condicionado.jpg",
     title: "Instalação de Ar Condicionado",
     description: "Sistemas de Climatização Residencial e Comercial"
+  },
+  {
+    image: "assets/img/Montagem-Industriais.jpg",
+    title: "Montagem Industrial",
+    description: "Montagem de Painéis e Infraestrutura Elétrica"
   }
 
 ];

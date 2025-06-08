@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaBolt, FaSnowflake, FaLightbulb, FaPlug, FaHome } from 'react-icons/fa';
+import { FaBolt, FaSnowflake, FaLightbulb, FaPlug } from 'react-icons/fa';
+import { MdFactory } from "react-icons/md";
 import { GiColdHeart } from 'react-icons/gi';
 import { MdAcUnit } from 'react-icons/md';
 
@@ -11,7 +12,7 @@ const services = [
   },
   {
     icon: <FaSnowflake className="text-4xl" />,
-    title: "Instalação de chileres",
+    title: "Instalação e manutenção de chileres",
     description: "Instalação de sistemas de climatização e refrigeração, incluindo chileres"
   },
   {
@@ -25,14 +26,9 @@ const services = [
     description: "Manutenção preventiva e corretiva em instalações elétricas de qualquer porte."
   },
   {
-    icon: <FaHome className="text-4xl" />,
-    title: "Padrão de Entrada",
-    description: "Regularização e instalação de padrão de entrada junto à concessionária de energia."
-  },
-  {
-    icon: <MdAcUnit  className="text-4xl" />,
-    title: "Instalações e manutenção de Ar-Condicionado",
-    description: "Instalação e manutenção de sistemas de climatização, garantindo conforto e eficiência energética."
+    icon: <MdFactory className="text-4xl" />,
+    title: "Montagens industriais",
+    description: "Montagem de painéis de grande e pequeno porte e todo tipo de montagem de infraestrutura, eletrocalhas, eletrodutos e leitos."
   }
 ];
 
