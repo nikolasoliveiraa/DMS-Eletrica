@@ -11,6 +11,16 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-17152194306');
+    
+    // Função de conversão
+    function registrarConversao() {
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17152194306/XG6cCPH5w9UaEILu5vI_',
+          'event_callback': function() {
+              console.log('Conversão registrada com sucesso');
+          }
+      });
+    }
   </script>
   <title>DMS Elétrica</title>
 </head>

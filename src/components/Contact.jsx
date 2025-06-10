@@ -5,27 +5,24 @@ import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 const Contact = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_r1ecxbq', 'template_14upepd', form.current, '68WIh7pnLrim9NRbs')
-      .then(() => {
-        alert('Pedido enviado com sucesso!');
-        form.current.reset();
-        // --- Rastreamento de conversão Google Ads ---
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', 'conversion', {
-            'send_to': 'AW-17152194306/XG6cCPH5w9UaEILu5vI_', // Substitua pelo seu ID/rótulo se necessário
-            // 'value': 1.0, // Opcional: valor da conversão
-            // 'currency': 'BRL', // Opcional: moeda
-            'event_callback': function() {
-              console.log('Conversão Google Ads registrada');
-            }
-          });
-        }
-        // --------------------------------------------
-      }, () => {
-        alert('Erro ao enviar pedido.');
-      });
+    
+    try {
+      await emailjs.sendForm('service_r1ecxbq', 'template_14upepd', form.current, '68WIh7pnLrim9NRbs')
+        .then(() => {
+          alert('Pedido enviado com sucesso!');
+          form.current.reset();
+        }, () => {
+          alert('Erro ao enviar pedido.');
+        });
+      
+      // Chama a função de conversão após o sucesso do envio
+      window.registrarConversao();
+      
+    } catch (error) {
+      console.error('Erro:', error);
+    }
   };
 
   return (
