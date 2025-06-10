@@ -11,6 +11,18 @@ const Contact = () => {
       .then(() => {
         alert('Pedido enviado com sucesso!');
         form.current.reset();
+        // --- Rastreamento de conversão Google Ads ---
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-17152194306/XG6cCPH5w9UaEILu5vI_', // Substitua pelo seu ID/rótulo se necessário
+            // 'value': 1.0, // Opcional: valor da conversão
+            // 'currency': 'BRL', // Opcional: moeda
+            'event_callback': function() {
+              console.log('Conversão Google Ads registrada');
+            }
+          });
+        }
+        // --------------------------------------------
       }, () => {
         alert('Erro ao enviar pedido.');
       });
